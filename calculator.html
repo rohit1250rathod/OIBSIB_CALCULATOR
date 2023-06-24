@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calcuate.css">
+    <link
+      rel="stylesheet"
+      text="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+</head>
+<body>
+    <h1 style="text-align: center; color:white">Calculator</h1>
+    <div class="calculatebox">
+        <div class="calculatecont">
+            <div class="calhead">
+                <div class="calhead1">
+                </div>
+                <div class="calhead2">
+                    <i class="fa-solid fa-wifi"></i>
+                    <span>4G</span>
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-battery-full"></i>
+                </div>
+            </div>
+            <form>
+            <div class="input">
+                <input id="calc" type="text" class="inputtype" name="cal">
+            </div>
+
+            <div class="inputbox">
+                <div class="inputbutton">
+                    <input type="button" class="buttonn" value="AC" onclick="cal.value=''">
+                    <input type="button" class="bluecol" value="(" style="font-size: 22px;" onclick="adde('(')">
+                    <input type="button" class="bluecol" value=")" style="font-size: 22px;" onclick="adde(')')">
+                    <input type="button" class="bluecol" value="/" style="font-size: 22px;" onclick="adde('/')">
+                    <input type="button" class="buttonn" value="7" onclick="adde(7)">
+                    <input type="button" class="buttonn" value="8" onclick="adde(8)"> 
+                    <input type="button" class="buttonn" value="9" onclick="adde(9)">
+                    <input type="button" class="bluecol" value="*" style="font-size: 22px;" onclick="adde('*')">
+                    <input type="button" class="buttonn" value="4" onclick="adde(4)">
+                    <input type="button" class="buttonn" value="5" onclick="adde(5)">
+                    <input type="button" class="buttonn" value="6" onclick="adde(6)">
+                    <input type="button" class="bluecol" value="-" style="font-size: 22px;" onclick="adde('-')">
+                    <input type="button" class="buttonn" value="1" onclick="adde(1)">
+                    <input type="button" class="buttonn" value="2" onclick="adde(2)">
+                    <input type="button" class="buttonn" value="3" onclick="adde(3)">
+                    <input type="button" class="bluecol" value="+" style="font-size: 22px;" onclick="adde('+')">
+                    <input type="button" class="bluecol" value="%" style="font-size: 22px;" onclick="adde('%')">
+                    <input type="button" class="buttonn" value="0" onclick="adde(0)">
+                    <input type="button" class="bluecol" value="." style="font-size: 22px;" onclick="adde('.')">
+                    <input type="button" class="bluecol" value="=" style="font-size: 22px;" onclick="adde('=')">
+                </div>
+            </form>
+                <br>
+                <hr class="hr">
+            </div>
+        </div>
+    </div>
+    <script>
+        function adde(x){
+            const cal=document.getElementById("calc")
+            if(x != '='){
+                cal.value+=x;
+            } 
+            else if(x == '='){
+                if(cal.value==''){
+                    alert("input feild is empty");
+                }
+                else{
+                    cal.value=eval(cal.value);
+                }
+            }           
+        }
+        const livetime=document.querySelector(".calhead1");
+        function timme(){
+            let timee=new Date();
+            livetime.innerText=timee.toLocaleTimeString("en-US",{hour12:false}).match(/\d{2}:\d{2}|[AMP]+/g).join('');
+            setTimeout(timme,1000);
+        }
+        timme();
+    </script>
+</body> 
+</html>

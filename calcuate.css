@@ -1,0 +1,87 @@
+body{
+    background-color: rgb(152, 152, 152);
+}
+.calculatebox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 1px solid black; */
+    margin: 30px 40%;
+    height: 500px;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 6px 6px 6px 6px black;
+}
+.calculatecont{
+    width: 100%;
+}
+.inputbox{
+    border: 1px solid rgb(203, 203, 203);
+    position: relative;
+    bottom: 0;
+    top: 0%;
+    height: 290px;
+    padding: 30px 15px 10px 15px;
+    border-radius: 20px;
+    background-color: rgb(231, 231, 231);
+}
+.calhead{
+    padding: 5px 25px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(243, 243, 243);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.calhead2 i{
+    font-size: 12px;
+}
+.calhead1{
+    font-size: 12px;
+}
+.calhead1 span,.calhead2 span{
+    font-size: 12px;
+}
+.bluecol{
+    color: rgb(5, 5, 146);
+    font-size: 22px;
+}  
+.input{
+    margin: 15px 15px 15px 15px;
+}
+.inputtype{
+    width: 95%;
+    height: 40px;
+    outline: none;
+    margin-top: 70px;
+    font-size: 25px;
+    text-align: right;
+    border: none;
+}
+.inputbutton{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.inputbutton .buttonn,.inputbutton button,.inputbutton .bluecol{
+    width: 45px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 17.5px;
+    background-color: rgb(229, 229, 229);
+    border: 1px solid rgb(202, 202, 202);
+    box-shadow: 2px 2px 2px 2px rgb(78, 78, 78);
+    transition: box-shadow 0.2s ease-in;
+    cursor: pointer;
+}
+.inputbutton .buttonn:hover,.bluecol:hover{
+    box-shadow: 0 0 0 0 white;
+    background-color: white;
+}
+.hr{
+    height: 2px;
+    background-color: rgb(119, 119, 119);
+    border: none;
+    width: 30%;
+}
